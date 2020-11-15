@@ -41,6 +41,7 @@
 		function onMapDblClick(e) {
 			var marker = L.marker(e.latlng)
 			marker.addTo(mymap);
+			marker.bindPopup("<b>Input details for this location</b>").openPopup();
 			//TODO: allow user to enter details about this location
 			//TODO: to add to database
 		}
@@ -58,7 +59,6 @@
 		//TODO: need to change this popup to show details about the location
 		marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 
-		mymap.on('click', onMapClick);
 		mymap.on('dblclick', onMapDblClick);
 
 	</script>
