@@ -17,9 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/map', function () {
-    return view('map');
-});
+// Route::get('/map', function () {
+//     return view('map');
+// });
+
+Route::resource('/map', 'MapController');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
